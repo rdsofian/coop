@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Customer;
 use App\Loan;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,8 @@ class LoanController extends Controller
      */
     public function index()
     {
-        //
+        $loans = Loan::all();
+        return view("loan.index", compact('loans'));
     }
 
     /**
@@ -24,7 +26,8 @@ class LoanController extends Controller
      */
     public function create()
     {
-        //
+        $customers = Customer::all();
+        return view("loan.create", compact('customers'));
     }
 
     /**
@@ -35,7 +38,14 @@ class LoanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $loan = new Loan();
+        $loan->loan_date = date('Y-m-d');
+        $loan->customer_id = $request->customer_id;
+        $loan->amount = $request->amount;
+        $loan->status = 0;
+        $loan->user_id = 1;
+        $loan->save();
+        return redirect()->route('loan.index');
     }
 
     /**

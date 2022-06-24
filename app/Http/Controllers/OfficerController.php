@@ -14,7 +14,8 @@ class OfficerController extends Controller
      */
     public function index()
     {
-        //
+        $officers = Officer::all();
+        return view("officer.index", compact('officers'));
     }
 
     /**
@@ -24,7 +25,7 @@ class OfficerController extends Controller
      */
     public function create()
     {
-        //
+        return view("officer.create");
     }
 
     /**
@@ -35,7 +36,16 @@ class OfficerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $officer = new Officer();
+        $officer->identity_number = $request->identity_number;
+        $officer->name = $request->name;
+        $officer->address = $request->address;
+        $officer->phone = $request->phone;
+        $officer->birth_place = $request->birth_place;
+        $officer->birth_date = $request->birth_date;
+        $officer->user_id = 1;
+        $officer->save();
+        return redirect()->route('officer.index');
     }
 
     /**
@@ -78,8 +88,10 @@ class OfficerController extends Controller
      * @param  \App\Officer  $officer
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Officer $officer)
+    public function destroy(Officer $officer, Request $request)
     {
-        //
+        $officer->delete();
+        $request->session()->flash('success', "Data Berhasil Dihapus");
+        return response()->json('success');
     }
 }

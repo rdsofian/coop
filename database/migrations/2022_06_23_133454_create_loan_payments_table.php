@@ -17,8 +17,8 @@ class CreateLoanPaymentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger("loan_id");
             $table->date("payment_date");
-            $table->decimal("payment");
-            $table->decimal("remaining");
+            $table->decimal("payment", 10, 2);
+            $table->decimal("remaining", 10, 2);
             $table->unsignedBigInteger("user_id");
             $table->timestamps();
         });

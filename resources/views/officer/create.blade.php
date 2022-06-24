@@ -2,14 +2,14 @@
 @section('content-top')
     <div class="card-header border-0 py-5">
         <h3 class="card-title align-items-start flex-column">
-            <span class="card-label font-weight-bold font-size-h4 text-dark-75">Tambah Data Nasabah</span>
+            <span class="card-label font-weight-bold font-size-h4 text-dark-75">Tambah Data Petugas</span>
         </h3>
     </div>
     <!--end::Header-->
     <!--begin::Body-->
     <div class="card-body py-0">
         <!--begin::Table-->
-        <form method="post" action="{{ route('customer.store') }}">
+        <form method="post" action="{{ route('officer.store') }}">
             @csrf
             <div class="form-group">
                 <label>No KTP</label>

@@ -2,8 +2,15 @@
 @section('content-top')
     <div class="card-header border-0 py-5">
         <h3 class="card-title align-items-start flex-column">
-            <span class="card-label font-weight-bold font-size-h4 text-dark-75">Tambah Data Nasabah</span>
+            <span class="card-label font-weight-bold font-size-h4 text-dark-75">Tambah Nasabah</span>
+            {{-- <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span> --}}
         </h3>
+        <div class="card-toolbar">
+            <a href="{{ route('dashboard') }}" class="btn btn-success font-weight-bolder font-size-sm">
+                Dashboard</a> &nbsp;&nbsp;
+            <a href="{{ route('customer.index') }}" class="btn btn-primary font-weight-bolder font-size-sm">
+                Nasabah</a>
+        </div>
     </div>
     <!--end::Header-->
     <!--begin::Body-->

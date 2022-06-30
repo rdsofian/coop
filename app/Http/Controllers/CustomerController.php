@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Customer;
 use App\Loan;
+use App\LoanPayment;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -111,6 +112,71 @@ class CustomerController extends Controller
         $loan->status = 1;
         $loan->user_id = 1;
         $loan->save();
-        return redirect()->route('customer.index');
+        return redirect()->route('customer.show', $loan->customer_id);
+    }
+
+    public function paymentForm($id) {
+        $customer = Customer::find($id);
+        return view("customer.payment", compact('customer'));
+    }
+
+    public function payment(Request $request) {
+        $loans = Loan::where('customer_id', $request->customer_id)->where('remaining', '>', 0)->get();
+        $customer = Customer::find($request->customer_id);
+        $amount = $request->payment;
+        if($customer->remainingLoan() >= $request->payment) {
+
+            foreach($loans as $loan) {
+                if($amount == 0) {
+                    break;
+                } else {
+                    if($amount >= $loan->remaining){
+                        if($loan->remaining == $amount) {
+                            $amount = 0;
+                            $loan->remaining = 0;
+                            $loan->status = 0;
+                            $loan->save();
+
+                            $loanPayment = new LoanPayment();
+                            $loanPayment->loan_id = $loan->id;
+                            $loanPayment->payment_date = date('Y-m-d');
+                            $loanPayment->payment = $request->payment;
+                            $loanPayment->user_id = 1;
+                            $loanPayment->save();
+                            break;
+                        } else {
+                            $payment_amount = $loan->remaining;
+                            $amount = $amount -  $loan->remaining;
+                            $loan->remaining = 0;
+                            $loan->status = 0;
+                            $loan->save();
+
+                            $loanPayment = new LoanPayment();
+                            $loanPayment->loan_id = $loan->id;
+                            $loanPayment->payment_date = date('Y-m-d');
+                            $loanPayment->payment = $payment_amount;
+                            $loanPayment->user_id = 1;
+                            $loanPayment->save();
+                        }
+                    } else {
+                        $payment = $amount;
+                        $remaining_amount =  $loan->remaining - $amount;
+                        $amount = 0;
+                        $loan->remaining = $remaining_amount;
+                        $loan->status = 1;
+                        $loan->save();
+
+                        $loanPayment = new LoanPayment();
+                        $loanPayment->loan_id = $loan->id;
+                        $loanPayment->payment_date = date('Y-m-d');
+                        $loanPayment->payment = $payment;
+                        $loanPayment->user_id = 1;
+                        $loanPayment->save();
+                    }
+                }
+            }
+        }
+
+        return redirect()->route('customer.show', $customer->id);
     }
 }

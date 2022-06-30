@@ -7,18 +7,10 @@
         {{-- <span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span> --}}
     </h3>
     <div class="card-toolbar">
+        <a href="{{ route('dashboard') }}" class="btn btn-success font-weight-bolder font-size-sm">
+            Dashboard</a>  &nbsp;&nbsp;
         <a href="{{ route('customer.create') }}" class="btn btn-primary font-weight-bolder font-size-sm">
-        <span class="svg-icon svg-icon-md svg-icon-white">
-            <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Add-user.svg-->
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                    <polygon points="0 0 24 0 24 24 0 24" />
-                    <path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-                    <path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
-                </g>
-            </svg>
-            <!--end::Svg Icon-->
-        </span>Tambah Nasabah</a>
+            Tambah Nasabah</a>
     </div>
 </div>
 <!--end::Header-->
@@ -29,16 +21,24 @@
         <thead>
             <tr>
                 <th>No</th>
+                <th></th>
                 <th>Nama Nasabah</th>
                 {{-- <th>KTP</th> --}}
                 <th>Jumlah Pinjaman</th>
-                <th>Aksi</th>
             </tr>
         </thead>
         <tbody>
         @foreach ($customers as $customer)
                 <tr>
                     <td> {{ $loop->iteration }} </td>
+                    <td nowrap="nowrap" style="width: auto">
+                        <a href="{{ route('customer.show' , $customer->id) }}" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye" viewBox="0 0 16 16">
+                                <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                                <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                            </svg>
+                        </a>
+                    </td>
                     <td> {{ $customer->name }} </td>
                     {{-- <td> {{ $customer->identity_number }} </td> --}}
                     <td class="text-right">
@@ -52,11 +52,7 @@
                             </span>
                         @endif
                     </td>
-                    <td nowrap="nowrap" class="text-center">
-                        <a href="{{ route('customer.show' , $customer->id) }}" class="btn btn-primary">Lihat</a>
-                        <a href="" class="btn btn-success">Bayar</a>
-                        <a href="{{ route('customer.loan', $customer->id) }}" class="btn btn-warning">Tambah</a>
-                    </td>
+
                 </tr>
             @endforeach
         </tbody>
@@ -65,8 +61,6 @@
     <!--end::Table-->
 </div>
 <!--end::Body-->
-@endsection
-
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-mds" role="document">
         <div class="modal-content shadow-sm">
@@ -80,6 +74,8 @@
         </div>
     </div>
 </div>
+@endsection
+
 
 
 @section('script')

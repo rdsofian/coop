@@ -26,6 +26,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/customer', 'CustomerController');
     Route::get('/customer/loan/{id}', 'CustomerController@loan')->name('customer.loan');
     Route::post('/customer/store-loan', 'CustomerController@storeLoan')->name('customer.store-loan');
+
+    Route::get('/customer/payment-form/{id}', 'CustomerController@paymentForm')->name('customer.payment-form');
+    Route::post('/customer/payment', 'CustomerController@payment')->name('customer.payment');
+
     Route::resource('/officer', 'OfficerController');
     Route::resource('/loan', 'LoanController');
     Route::resource('/loan-payment', 'LoanPaymentController');

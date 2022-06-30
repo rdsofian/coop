@@ -17,7 +17,8 @@ class CreateLoansTable extends Migration
             $table->id();
             $table->date("loan_date");
             $table->unsignedBigInteger("customer_id");
-            $table->decimal("amount", 10, 2);
+            $table->decimal("amount", 10, 0);
+            $table->decimal("remaining", 10, 0);
             $table->string("status");
             $table->date("finish_date")->nullable();
             $table->unsignedBigInteger("user_id");

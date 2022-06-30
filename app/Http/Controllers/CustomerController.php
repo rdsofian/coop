@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Loan;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -56,7 +57,7 @@ class CustomerController extends Controller
      */
     public function show(Customer $customer)
     {
-        //
+        return view('customer.list', compact('customer'));
     }
 
     /**
@@ -93,5 +94,23 @@ class CustomerController extends Controller
         $customer->delete();
         $request->session()->flash('success', "Data Berhasil Dihapus");
         return response()->json('success');
+    }
+
+    public function loan($id) {
+        $customer = Customer::find($id);
+        return view("customer.loan", compact('customer'));
+    }
+
+    public function storeLoan(Request $request) {
+        $loan = new Loan();
+        $loan->loan_date = date('Y-m-d');
+        $loan->customer_id = $request->customer_id;
+        $loan->amount = $request->amount;
+        $loan->remaining = $request->amount;
+        $loan->finish_date = $request->finish_date;
+        $loan->status = 1;
+        $loan->user_id = 1;
+        $loan->save();
+        return redirect()->route('customer.index');
     }
 }

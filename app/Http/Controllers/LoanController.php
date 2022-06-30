@@ -42,7 +42,9 @@ class LoanController extends Controller
         $loan->loan_date = date('Y-m-d');
         $loan->customer_id = $request->customer_id;
         $loan->amount = $request->amount;
-        $loan->status = 0;
+        $loan->remaining = $request->amount;
+        $loan->finish_date = $request->finish_date;
+        $loan->status = 1;
         $loan->user_id = 1;
         $loan->save();
         return redirect()->route('loan.index');

@@ -66,14 +66,14 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
         type="text/css" />
     <link href="{{ asset('theme/demo1/dist/assets/css/themes/layout/aside/dark.css') }}" rel="stylesheet"
         type="text/css" />
-    <link href="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.7/css/jquery.dataTables.min.css">
 
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css"> --}}
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
+    {{-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css"> --}}
 
     <!--end::Layout Themes-->
-    <link rel="shortcut icon" href="{{ asset('img/Logo-mi.png') }}"/>
+    <link rel="shortcut icon" href="{{ asset('img/Logo-mi.png') }}" />
     <!-- Hotjar Tracking Code for keenthemes.com -->
     <script>
         (function(h, o, t, j, a, r) {
@@ -108,7 +108,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
     <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
         <!--begin::Logo-->
         <a href="index.html">
-            <img alt="Logo" src="https://preview.keenthemes.com/keen/theme/demo1/dist/assets/media/logos/logo-1.svg" />
+            <img alt="Logo"
+                src="https://preview.keenthemes.com/keen/theme/demo1/dist/assets/media/logos/logo-1.svg" />
         </a>
         <!--end::Logo-->
         <!--begin::Toolbar-->
@@ -156,8 +157,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                 <div class="brand flex-column-auto" id="kt_brand">
                     <!--begin::Logo-->
                     <a href="index.html" class="brand-logo">
-                        <img alt="Logo" src="{{ asset('img/Logo-mi.png') }}" class="w-50px m-3 mt-5 p-1"
-                            style="background-color: white; border-radius: 10px" />
+                        {{-- <img alt="Logo" src="{{ asset('img/Logo-mi.png') }}" class="w-50px m-3 mt-5 p-1"
+                            style="background-color: white; border-radius: 10px" /> --}}
+                            ET KOPERASI
                     </a>
                     <!--end::Logo-->
                     <!--begin::Toggle-->
@@ -234,7 +236,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                     <i class="symbol-badge bg-success"></i>
                 </div>
                 <div class="d-flex flex-column">
-                    <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Nama Mahasiswa</a>
+                    <a href="#" class="font-weight-bold font-size-h5 text-dark-75 text-hover-primary">Nama
+                        Mahasiswa</a>
                     <div class="navi mt-1">
                         <a href="#" class="navi-item">
                             <span class="navi-link p-0 pb-2">
@@ -249,7 +252,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <path
                                                     d="M21,12.0829584 C20.6747915,12.0283988 20.3407122,12 20,12 C16.6862915,12 14,14.6862915 14,18 C14,18.3407122 14.0283988,18.6747915 14.0829584,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,8 C3,6.8954305 3.8954305,6 5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,12.0829584 Z M18.1444251,7.83964668 L12,11.1481833 L5.85557487,7.83964668 C5.4908718,7.6432681 5.03602525,7.77972206 4.83964668,8.14442513 C4.6432681,8.5091282 4.77972206,8.96397475 5.14442513,9.16035332 L11.6444251,12.6603533 C11.8664074,12.7798822 12.1335926,12.7798822 12.3555749,12.6603533 L18.8555749,9.16035332 C19.2202779,8.96397475 19.3567319,8.5091282 19.1603533,8.14442513 C18.9639747,7.77972206 18.5091282,7.6432681 18.1444251,7.83964668 Z"
                                                     fill="#000000" />
-                                                <circle fill="#000000" opacity="0.3" cx="19.5" cy="17.5" r="2.5" />
+                                                <circle fill="#000000" opacity="0.3" cx="19.5" cy="17.5"
+                                                    r="2.5" />
                                             </g>
                                         </svg>
                                         <!--end::Svg Icon-->
@@ -270,7 +274,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                 <span class="navi-item mt-2">
                     <span class="navi-link">
                         <a href={{ route('logout') }}"
-                            class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6" onclick="event.preventDefault();
+                            class="btn btn-sm btn-light-primary font-weight-bolder py-3 px-6"
+                            onclick="event.preventDefault();
                         document.getElementById('logout-form').submit();">
                             Sign Out
                         </a>
@@ -294,15 +299,15 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                         <a class="nav-link active" data-toggle="tab" href="#kt_quick_panel_logs">Logs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab"
-                            href="#kt_quick_panel_notifications">Notifications</a>
+                        <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_notifications">Notifications</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#kt_quick_panel_settings">Settings</a>
                     </li>
                 </ul>
                 <div class="offcanvas-close mt-n1 pr-5">
-                    <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_quick_panel_close">
+                    <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary"
+                        id="kt_quick_panel_close">
                         <i class="ki ki-close icon-xs text-muted"></i>
                     </a>
                 </div>
@@ -328,8 +333,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M16,15.6315789 L16,12 C16,10.3431458 14.6568542,9 13,9 L6.16183229,9 L6.16183229,5.52631579 C6.16183229,4.13107011 7.29290239,3 8.68814808,3 L20.4776218,3 C21.8728674,3 23.0039375,4.13107011 23.0039375,5.52631579 L23.0039375,13.1052632 L23.0206157,17.786793 C23.0215995,18.0629336 22.7985408,18.2875874 22.5224001,18.2885711 C22.3891754,18.2890457 22.2612702,18.2363324 22.1670655,18.1421277 L19.6565168,15.6315789 L16,15.6315789 Z"
                                                             fill="#000000" />
@@ -360,8 +367,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M11.7573593,15.2426407 L8.75735931,15.2426407 C8.20507456,15.2426407 7.75735931,15.6903559 7.75735931,16.2426407 C7.75735931,16.7949254 8.20507456,17.2426407 8.75735931,17.2426407 L11.7573593,17.2426407 L11.7573593,18.2426407 C11.7573593,19.3472102 10.8619288,20.2426407 9.75735931,20.2426407 L5.75735931,20.2426407 C4.65278981,20.2426407 3.75735931,19.3472102 3.75735931,18.2426407 L3.75735931,14.2426407 C3.75735931,13.1380712 4.65278981,12.2426407 5.75735931,12.2426407 L9.75735931,12.2426407 C10.8619288,12.2426407 11.7573593,13.1380712 11.7573593,14.2426407 L11.7573593,15.2426407 Z"
                                                             fill="#000000" opacity="0.3"
@@ -403,15 +412,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M5,3 L6,3 C6.55228475,3 7,3.44771525 7,4 L7,20 C7,20.5522847 6.55228475,21 6,21 L5,21 C4.44771525,21 4,20.5522847 4,20 L4,4 C4,3.44771525 4.44771525,3 5,3 Z M10,3 L11,3 C11.5522847,3 12,3.44771525 12,4 L12,20 C12,20.5522847 11.5522847,21 11,21 L10,21 C9.44771525,21 9,20.5522847 9,20 L9,4 C9,3.44771525 9.44771525,3 10,3 Z"
                                                             fill="#000000" />
                                                         <rect fill="#000000" opacity="0.3"
                                                             transform="translate(17.825568, 11.945519) rotate(-19.000000) translate(-17.825568, -11.945519)"
-                                                            x="16.3255682" y="2.94551858" width="3" height="18"
-                                                            rx="1" />
+                                                            x="16.3255682" y="2.94551858" width="3"
+                                                            height="18" rx="1" />
                                                     </g>
                                                 </svg>
                                                 <!--end::Svg Icon-->
@@ -437,7 +448,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
                                                         <polygon points="0 0 24 0 24 24 0 24" />
                                                         <path
                                                             d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z"
@@ -1032,7 +1044,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         you to confirm your email.
                                         <a href="#" class="font-weight-bold">Learn more</a>.
                                     </p>
-                                    <button type="button" class="btn btn-light-danger font-weight-bolder btn-sm">Setup
+                                    <button type="button"
+                                        class="btn btn-light-danger font-weight-bolder btn-sm">Setup
                                         login verification</button>
                                 </div>
                             </div>
@@ -1062,9 +1075,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         <span class="svg-icon svg-icon-lg">
                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Add-user.svg-->
                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
-                                                viewBox="0 0 24 24" version="1.1">
-                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
+                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none"
+                                                    fill-rule="evenodd">
                                                     <polygon points="0 0 24 0 24 24 0 24" />
                                                     <path
                                                         d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z"
@@ -1086,8 +1100,9 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Add-user.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
                                                                     <polygon points="0 0 24 0 24 24 0 24" />
@@ -1112,11 +1127,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Clipboard-check.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
                                                                     <path
                                                                         d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z"
                                                                         fill="#000000" opacity="0.3" />
@@ -1140,11 +1157,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Code/Time-schedule.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
                                                                     <path
                                                                         d="M10.9630156,7.5 L11.0475062,7.5 C11.3043819,7.5 11.5194647,7.69464724 11.5450248,7.95024814 L12,12.5 L15.2480695,14.3560397 C15.403857,14.4450611 15.5,14.6107328 15.5,14.7901613 L15.5,15 C15.5,15.2109164 15.3290185,15.3818979 15.1181021,15.3818979 C15.0841582,15.3818979 15.0503659,15.3773725 15.0176181,15.3684413 L10.3986612,14.1087258 C10.1672824,14.0456225 10.0132986,13.8271186 10.0316926,13.5879956 L10.4644883,7.96165175 C10.4845267,7.70115317 10.7017474,7.5 10.9630156,7.5 Z"
                                                                         fill="#000000" />
@@ -1169,11 +1188,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Code/Git3.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
                                                                     <path
                                                                         d="M7,11 L15,11 C16.1045695,11 17,10.1045695 17,9 L17,8 L19,8 L19,9 C19,11.209139 17.209139,13 15,13 L7,13 L7,15 C7,15.5522847 6.55228475,16 6,16 C5.44771525,16 5,15.5522847 5,15 L5,9 C5,8.44771525 5.44771525,8 6,8 C6.55228475,8 7,8.44771525 7,9 L7,11 Z"
                                                                         fill="#000000" opacity="0.3" />
@@ -1200,11 +1221,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Code/Settings4.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
                                                                     <path
                                                                         d="M18.6225,9.75 L18.75,9.75 C19.9926407,9.75 21,10.7573593 21,12 C21,13.2426407 19.9926407,14.25 18.75,14.25 L18.6854912,14.249994 C18.4911876,14.250769 18.3158978,14.366855 18.2393549,14.5454486 C18.1556809,14.7351461 18.1942911,14.948087 18.3278301,15.0846699 L18.372535,15.129375 C18.7950334,15.5514036 19.03243,16.1240792 19.03243,16.72125 C19.03243,17.3184208 18.7950334,17.8910964 18.373125,18.312535 C17.9510964,18.7350334 17.3784208,18.97243 16.78125,18.97243 C16.1840792,18.97243 15.6114036,18.7350334 15.1896699,18.3128301 L15.1505513,18.2736469 C15.008087,18.1342911 14.7951461,18.0956809 14.6054486,18.1793549 C14.426855,18.2558978 14.310769,18.4311876 14.31,18.6225 L14.31,18.75 C14.31,19.9926407 13.3026407,21 12.06,21 C10.8173593,21 9.81,19.9926407 9.81,18.75 C9.80552409,18.4999185 9.67898539,18.3229986 9.44717599,18.2361469 C9.26485393,18.1556809 9.05191298,18.1942911 8.91533009,18.3278301 L8.870625,18.372535 C8.44859642,18.7950334 7.87592081,19.03243 7.27875,19.03243 C6.68157919,19.03243 6.10890358,18.7950334 5.68746499,18.373125 C5.26496665,17.9510964 5.02757002,17.3784208 5.02757002,16.78125 C5.02757002,16.1840792 5.26496665,15.6114036 5.68716991,15.1896699 L5.72635306,15.1505513 C5.86570889,15.008087 5.90431906,14.7951461 5.82064513,14.6054486 C5.74410223,14.426855 5.56881236,14.310769 5.3775,14.31 L5.25,14.31 C4.00735931,14.31 3,13.3026407 3,12.06 C3,10.8173593 4.00735931,9.81 5.25,9.81 C5.50008154,9.80552409 5.67700139,9.67898539 5.76385306,9.44717599 C5.84431906,9.26485393 5.80570889,9.05191298 5.67216991,8.91533009 L5.62746499,8.870625 C5.20496665,8.44859642 4.96757002,7.87592081 4.96757002,7.27875 C4.96757002,6.68157919 5.20496665,6.10890358 5.626875,5.68746499 C6.04890358,5.26496665 6.62157919,5.02757002 7.21875,5.02757002 C7.81592081,5.02757002 8.38859642,5.26496665 8.81033009,5.68716991 L8.84944872,5.72635306 C8.99191298,5.86570889 9.20485393,5.90431906 9.38717599,5.82385306 L9.49484664,5.80114977 C9.65041313,5.71688974 9.7492905,5.55401473 9.75,5.3775 L9.75,5.25 C9.75,4.00735931 10.7573593,3 12,3 C13.2426407,3 14.25,4.00735931 14.25,5.25 L14.249994,5.31450877 C14.250769,5.50881236 14.366855,5.68410223 14.552824,5.76385306 C14.7351461,5.84431906 14.948087,5.80570889 15.0846699,5.67216991 L15.129375,5.62746499 C15.5514036,5.20496665 16.1240792,4.96757002 16.72125,4.96757002 C17.3184208,4.96757002 17.8910964,5.20496665 18.312535,5.626875 C18.7350334,6.04890358 18.97243,6.62157919 18.97243,7.21875 C18.97243,7.81592081 18.7350334,8.38859642 18.3128301,8.81033009 L18.2736469,8.84944872 C18.1342911,8.99191298 18.0956809,9.20485393 18.1761469,9.38717599 L18.1988502,9.49484664 C18.2831103,9.65041313 18.4459853,9.7492905 18.6225,9.75 Z"
                                                                         fill="#000000" fill-rule="nonzero"
@@ -1227,17 +1250,22 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Code/Info-circle.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
-                                                                    <circle fill="#000000" opacity="0.3" cx="12" cy="12"
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
+                                                                    <circle fill="#000000" opacity="0.3"
+                                                                        cx="12" cy="12"
                                                                         r="10" />
-                                                                    <rect fill="#000000" x="11" y="10" width="2"
-                                                                        height="7" rx="1" />
-                                                                    <rect fill="#000000" x="11" y="7" width="2"
-                                                                        height="2" rx="1" />
+                                                                    <rect fill="#000000" x="11"
+                                                                        y="10" width="2" height="7"
+                                                                        rx="1" />
+                                                                    <rect fill="#000000" x="11"
+                                                                        y="7" width="2" height="2"
+                                                                        rx="1" />
                                                                 </g>
                                                             </svg>
                                                             <!--end::Svg Icon-->
@@ -1252,11 +1280,13 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                         <span class="svg-icon svg-icon-md svg-icon-primary">
                                                             <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Safe-chat.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg"
-                                                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
-                                                                height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                width="24px" height="24px" viewBox="0 0 24 24"
+                                                                version="1.1">
                                                                 <g stroke="none" stroke-width="1" fill="none"
                                                                     fill-rule="evenodd">
-                                                                    <rect x="0" y="0" width="24" height="24" />
+                                                                    <rect x="0" y="0"
+                                                                        width="24" height="24" />
                                                                     <path
                                                                         d="M8,17 C8.55228475,17 9,17.4477153 9,18 L9,21 C9,21.5522847 8.55228475,22 8,22 L3,22 C2.44771525,22 2,21.5522847 2,21 L2,18 C2,17.4477153 2.44771525,17 3,17 L3,16.5 C3,15.1192881 4.11928813,14 5.5,14 C6.88071187,14 8,15.1192881 8,16.5 L8,17 Z M5.5,15 C4.67157288,15 4,15.6715729 4,16.5 L4,17 L7,17 L7,16.5 C7,15.6715729 6.32842712,15 5.5,15 Z"
                                                                         fill="#000000" opacity="0.3" />
@@ -1331,7 +1361,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                     class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                                             </div>
                                             <div class="symbol symbol-circle symbol-40 ml-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
                                             </div>
                                         </div>
                                         <div
@@ -1369,7 +1400,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                     class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                                             </div>
                                             <div class="symbol symbol-circle symbol-40 ml-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
                                             </div>
                                         </div>
                                         <div
@@ -1381,7 +1413,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                     <div class="d-flex flex-column mb-5 align-items-start">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-circle symbol-40 mr-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-2.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-2.jpg" />
                                             </div>
                                             <div>
                                                 <a href="#"
@@ -1406,7 +1439,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                     class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                                             </div>
                                             <div class="symbol symbol-circle symbol-40 ml-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
                                             </div>
                                         </div>
                                         <div
@@ -1420,7 +1454,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                     <div class="d-flex flex-column mb-5 align-items-start">
                                         <div class="d-flex align-items-center">
                                             <div class="symbol symbol-circle symbol-40 mr-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-2.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-2.jpg" />
                                             </div>
                                             <div>
                                                 <a href="#"
@@ -1443,7 +1478,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                     class="text-dark-75 text-hover-primary font-weight-bold font-size-h6">You</a>
                                             </div>
                                             <div class="symbol symbol-circle symbol-40 ml-3">
-                                                <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
+                                                <img alt="Pic"
+                                                    src="../theme/demo1/dist/assets/media/users/150-9.jpg" />
                                             </div>
                                         </div>
                                         <div
@@ -1462,8 +1498,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                         <!--begin::Footer-->
                         <div class="card-footer align-items-center">
                             <!--begin::Compose-->
-                            <textarea class="form-control border-0 p-0" rows="2"
-                                placeholder="Type a message"></textarea>
+                            <textarea class="form-control border-0 p-0" rows="2" placeholder="Type a message"></textarea>
                             <div class="d-flex align-items-center justify-content-between mt-5">
                                 <div class="mr-3">
                                     <a href="#" class="btn btn-clean btn-icon btn-md mr-1">
@@ -1495,7 +1530,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                     height="24px" viewBox="0 0 24 24" version="1.1">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <polygon points="0 0 24 0 24 24 0 24" />
-                        <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1" />
+                        <rect fill="#000000" opacity="0.3" x="11" y="10" width="2"
+                            height="10" rx="1" />
                         <path
                             d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
                             fill="#000000" fill-rule="nonzero" />
@@ -1513,7 +1549,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
             <!--begin::Header-->
             <div class="offcanvas-header d-flex align-items-center justify-content-between pb-7">
                 <h4 class="font-weight-bold m-0">Select A Demo</h4>
-                <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary" id="kt_demo_panel_close">
+                <a href="#" class="btn btn-xs btn-icon btn-light btn-hover-primary"
+                    id="kt_demo_panel_close">
                     <i class="ki ki-close icon-xs text-muted"></i>
                 </a>
             </div>
@@ -1567,7 +1604,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                 <tr>
                                     <td class="pr-0 py-4">
                                         <div class="symbol symbol-45 flex-shrink-0 mr-5 mt-1">
-                                            <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-5.jpg" />
+                                            <img alt="Pic"
+                                                src="../theme/demo1/dist/assets/media/users/150-5.jpg" />
                                         </div>
                                     </td>
                                     <td class="pl-0">
@@ -1599,14 +1637,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         </div>
                                     </td>
                                     <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <a href="#"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z"
                                                             fill="#000000" fill-rule="nonzero"
@@ -1625,8 +1666,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z"
                                                             fill="#000000" fill-rule="nonzero" />
@@ -1675,14 +1718,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         </div>
                                     </td>
                                     <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <a href="#"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z"
                                                             fill="#000000" fill-rule="nonzero"
@@ -1701,8 +1747,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z"
                                                             fill="#000000" fill-rule="nonzero" />
@@ -1751,14 +1799,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         </div>
                                     </td>
                                     <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <a href="#"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z"
                                                             fill="#000000" fill-rule="nonzero"
@@ -1777,8 +1828,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z"
                                                             fill="#000000" fill-rule="nonzero" />
@@ -1795,7 +1848,8 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                 <tr>
                                     <td class="pr-0 py-4">
                                         <div class="symbol symbol-45 flex-shrink-0 mr-3">
-                                            <img alt="Pic" src="../theme/demo1/dist/assets/media/users/150-7.jpg" />
+                                            <img alt="Pic"
+                                                src="../theme/demo1/dist/assets/media/users/150-7.jpg" />
                                         </div>
                                     </td>
                                     <td class="pl-0">
@@ -1827,14 +1881,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         </div>
                                     </td>
                                     <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <a href="#"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z"
                                                             fill="#000000" fill-rule="nonzero"
@@ -1853,8 +1910,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z"
                                                             fill="#000000" fill-rule="nonzero" />
@@ -1903,14 +1962,17 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                         </div>
                                     </td>
                                     <td class="pr-0 text-right">
-                                        <a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
+                                        <a href="#"
+                                            class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
                                             <span class="svg-icon svg-icon-md svg-icon-primary">
                                                 <!--begin::Svg Icon | path:/keen/theme/demo1/dist/assets/media/svg/icons/Communication/Write.svg-->
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z"
                                                             fill="#000000" fill-rule="nonzero"
@@ -1929,8 +1991,10 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" width="24px"
                                                     height="24px" viewBox="0 0 24 24" version="1.1">
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <rect x="0" y="0" width="24" height="24" />
+                                                    <g stroke="none" stroke-width="1" fill="none"
+                                                        fill-rule="evenodd">
+                                                        <rect x="0" y="0" width="24"
+                                                            height="24" />
                                                         <path
                                                             d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z"
                                                             fill="#000000" fill-rule="nonzero" />
@@ -2018,6 +2082,7 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
                 "font-family": "Poppins"
             };
         </script>
+
         <!--end::Global Config-->
         <!--begin::Global Theme Bundle(used by all pages)-->
         <script src="{{ asset('theme/demo1/dist/assets/plugins/global/plugins.bundle1036.js?v=2.1.1') }}"></script>
@@ -2038,11 +2103,20 @@ License: You must have a valid license purchased only from themes.getbootstrap.c
         <!--begin::Page Scripts(used by this page)-->
         <script src="{{ asset('theme/demo1/dist/assets/js/pages/features/datatables/basic/paginations1036.js?v=2.1.1') }}">
         </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-        <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css"></script>
+        <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+        {{-- Delete Ploting --}}
+
+
+
 
         @yield("script")
+        {{-- END OF DELETE PLOTING --}}
+        <!--end::Page Scripts-->
+
         {{-- END OF DELETE PLOTING --}}
         <!--end::Page Scripts-->
 </body>

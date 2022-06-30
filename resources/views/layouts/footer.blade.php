@@ -6,7 +6,7 @@
                         <!--begin::Copyright-->
                         <div class="text-dark order-2 order-md-1">
                             <span class="text-muted font-weight-bold mr-2">2022©</span>
-                            <span>Imam Firmansyah - Teknik Informatika 2018</span>
+                            <span>BODAT</span>
                         </div>
                         <!--end::Copyright-->
                         <!--begin::Nav-->

@@ -24,6 +24,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::resource('/customer', 'CustomerController');
+    Route::get('/customer/loan/{id}', 'CustomerController@loan')->name('customer.loan');
+    Route::post('/customer/store-loan', 'CustomerController@storeLoan')->name('customer.store-loan');
     Route::resource('/officer', 'OfficerController');
     Route::resource('/loan', 'LoanController');
     Route::resource('/loan-payment', 'LoanPaymentController');
